@@ -5,6 +5,7 @@ node {
    stage('build') {
       sh '''
          mvn clean package -f ./complete/pom.xml
+         mkdir -p target
          cd target
          cp ../src/main/resources/web.config web.config
          cp todo-app-java-on-azure-1.0-SNAPSHOT.jar app.jar 
